@@ -44,30 +44,12 @@
 	if(count.equals("")){
 %>	
 
-		<tr style="height: 5%">
-			<td colspan="5">네비게이션</td>
+		<tr style="height: 80%">
+			<td colspan="5">
 			
-		</tr>
-		<tr style="height: 5%">
-			<td style="width:20%; text-align: center;">버거킹</td>
-			<td style="width:20%; text-align: center;">카카오뱅크</td>
-			<td style="width:20%; text-align: center;"> 비트캠프</td>
-			<td style="width:20%; text-align: center;">SKT</td>
-			<td style="width:20%; text-align: center;">로또</td>
-		</tr>
-<%
-	String menu = request.getParameter("menu");
-	String count = request.getParameter("count");
-	String total = "";
-	String hamburger = request.getParameter("hamburger");
-	String coke = request.getParameter("coke");
-	String chip = request.getParameter("chip");
-	String coffee = request.getParameter("coffee");
-	String price = "";
-	if(count.equals("")){
-%>
-	<tr style="height: 80%">
-		<td colspan="5">
+		
+
+
 			<div style="width : 300px; border: 3px solid red; margin: 0 auto;">
 		<p>
 		메뉴와 수량을 반드시 입력해야 합니다.
