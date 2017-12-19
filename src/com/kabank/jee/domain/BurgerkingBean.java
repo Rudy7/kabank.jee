@@ -3,13 +3,14 @@ package com.kabank.jee.domain;
 import java.io.Serializable;
 
 public class BurgerkingBean implements Serializable {
+	
 	private	String menu, price, count;
-
-	public String getMemu() {
+	
+	public String getMenu() {
 		return menu;
 	}
 
-	public void setMemu(String menu) {
+	public void setMenu(String menu) {
 		this.menu = menu;
 	}
 

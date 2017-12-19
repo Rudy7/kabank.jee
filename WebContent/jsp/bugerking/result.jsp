@@ -1,23 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="../common/header.jsp"%>
 <%@ include file="../common/navigation.jsp"%>
+<%@ page import="java.util.*" %>
+<%@ page import="com.kabank.jee.domain.BurgerkingBean" %>
+<jsp:useBean id="hamburger" class="com.kabank.jee.domain.BurgerkingBean" scope="request"/>
+<jsp:useBean id="coke" class="com.kabank.jee.domain.BurgerkingBean" scope="request"/>
+<jsp:useBean id="chip" class="com.kabank.jee.domain.BurgerkingBean" scope="request"/>
+<jsp:useBean id="coffee" class="com.kabank.jee.domain.BurgerkingBean" scope="request"/>
+<jsp:useBean id="bagle" class="com.kabank.jee.domain.BurgerkingBean" scope="request"/>
+<jsp:useBean id="salad" class="com.kabank.jee.domain.BurgerkingBean" scope="request"/>
 <%
-/* 	String hamburger = request.getParameter("hamburger");
-	String coke = request.getParameter("coke");
-	String chip = request.getParameter("chip");
-	String coffee = request.getParameter("coffee");
-	String bagle = request.getParameter("bagle");
-	String salad = request.getParameter("salad");
-	String count = request.getParameter("count");	 */
-	
-	// <td colspan="3">
-	//<input type="hidden" name="hamburger" value="5500" /> 
-	//<input type="hidden" name="coke" value="1000" /> 
-	//<input type="hidden" name="chip" value="1000" /> 
-	//<input type="hidden" name="coffee" value="900" />   
-	//<input type="submit" value="전  송"  style="width:100px;"/>
-	//</td>  
-	
 	String hamburgerPrice = request.getParameter("hamburger");
 	String cokePrice = request.getParameter("coke");
 	String chipPrice = request.getParameter("chip");
@@ -25,23 +17,60 @@
 	String baglePrice = request.getParameter("bagle");
 	String saladPrice = request.getParameter("salad");
 	
-	String hamburgercount = request.getParameter("hamburger-count");
-	String cokecount = request.getParameter("coke-count");
-	String chipcount = request.getParameter("chip-count");
-	String coffeecount = request.getParameter("coffee-count");
-	String baglecount = request.getParameter("bagle-count");
-	String saladcount = request.getParameter("salad-count");
+	String hamburgerCount = request.getParameter("hamburger-count");
+	String cokeCount = request.getParameter("coke-count");
+	String chipCount = request.getParameter("chip-count");
+	String coffeeCount = request.getParameter("coffee-count");
+	String bagleCount = request.getParameter("bagle-count");
+	String saladCount = request.getParameter("salad-count");
 	
 	String place = request.getParameter("place");
 	
-	String[] menu = request.getParameterValues("menu");
-					for(String s: menu){
-%>				
-						주문한 품목 <%= s %> 	
-<%		
-	 }                 
-	String price = "";
-	String total = "";
+	hamburger.setMenu("햄버거");
+	hamburger.setPrice(hamburgerPrice);
+	hamburger.setCount(hamburgerCount);
+	
+	coke.setMenu("콜라");
+	coke.setPrice(cokePrice);
+	coke.setCount(cokeCount);
+	
+	chip.setMenu("감자튀김");
+	chip.setPrice(chipPrice);
+	chip.setCount(chipCount);
+	
+	coffee.setMenu("커피");
+	coffee.setPrice(coffeePrice);
+	coffee.setCount(coffeeCount);
+	
+	bagle.setMenu("베이글");
+	bagle.setPrice(baglePrice);
+	bagle.setCount(bagleCount);
+	
+ 	salad.setMenu("샐러드");
+	salad.setPrice(saladPrice);
+	salad.setCount(saladCount);
 
+	
+	List<BurgerkingBean> list = new ArrayList<>();
+	
+	list.add(hamburger);
+	list.add(coke);
+	list.add(chip);
+	list.add(coffee);
+	list.add(bagle);
+	list.add(salad);
+	
+	int res = 0;
+	String total = "";
+	
+%>
+<%= place %>
+<%
+		for(BurgerkingBean s: list){
+%>
+			<%=s %> <br/>
+<% 
+		}
 %>
 <%@ include file="../common/footer.jsp"%>
+
