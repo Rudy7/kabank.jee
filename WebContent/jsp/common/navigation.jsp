@@ -24,5 +24,5 @@
 			<td style="width: 20%; text-align: center;">
 				<a href="../lotto/main.jsp">로또</a></td>
 		</tr>
-		<tr>
+		<tr style="height: 80%">
 			<td colspan="5">
