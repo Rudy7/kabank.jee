@@ -1,44 +1,58 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%-- <%@ include file= "common/header.jsp" %> --%>		
-
-
-
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>Index</title>
-	<style>
-	#wrapper {width: 80%; height: 500px; margin: 0 auto;}
-	#wrapper tr {width: 100%; height: 50px; border: 1px solid gray;}
-	#wrapper tr th {width: 100%; height: 30px; border: 1px solid gray;}
-	#wrapper tr td {width: 100%; height: 30px; border: 1px solid gray;}
-	table, tr, td, th {border-collapse: collapse;}
-	#login-box {width: 300px;margin: 0auto;}
-/* 	#login-box tr {} */
-</style>
+	<meta charset="UTF-8" />
+	<title>index</title>
+		<link rel="shortcut icon" href="../../img/img.jpg" />
+		<link rel="stylesheet" href="../css/common.css" />
+		<link rel="stylesheet" href="../css/index.css" />
 </head>
 <body>
+<div id="wrapper">
 
-	<table id="wrapper">
-		<!-- 보통 바디 아래 있는 가장 큰 녀석을 래퍼를 준다. 감쌀려고,  -->
-		<tr style="height: 10%">
-			<td colspan="5">HOME</td>
-		</tr>
-		<tr>
+		<header id = "index_header">
+			<a href="../index.jsp" style="margin-left: 50px">HOME</a>
+		</header>
+		<section id="index_section">
+			<article>
+			
+		 <table id= "index_table">
+			<tr style="height:60%">
 			<td colspan="5">
-			<form action="bugerking/main.jsp">
-				<table id="login-box">
+			
+				<form action="burgerking/main.jsp">
+				<aside id="join_aside">
+				<table id="index_login_box">
 						<tr>
-							<td style="width: 200px; margin:0 auto;"> <input type="text" placeholder="ID" /></td>
-							<td rowspan="2"><input type="submit" value="로그인" style="width: 100px; height: 100px;"></td>
+	   						<td>
+	   						<input type="text" id="index_input_id" placeholder="ID"> 
+						    </td>
+						    <td colspan="2">
+							<input type="submit" id="index_input_btn" value="로그인"> 
+							</td>
 						</tr>
 						<tr>
-							<td><input type="password" placeholder="PASSWORD" name="pw" /></td>
+							<td>
+							<input type="text" id="index_input_pass" placeholder="PASSWORD" />
+							</td>
+							<td>
+							
+							</td>
 						</tr>
+						
 				</table>
-			</form>
-	</table>
+				</aside>
+				</form>
+				<tr><td>
+				<a href="member/join.jsp">
+							<input type="submit" value="회원가입"/>
+							</a>
+				</td></tr>
+			</table> 
+			</article>
+	</section>
+<%@ include file= "common/footer.jsp" %>
+</div>
 </body>
 </html>
-<%@ include file= "common/footer.jsp" %>

@@ -1,6 +1,9 @@
+<%@page import="java.text.SimpleDateFormat"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file= "../common/header.jsp" %>	
-<%@ include file= "../common/navigation.jsp" %>	
+<%@ include file= "../common/head.jsp" %>	
+<%@ include file= "../common/nav.jsp" %>	
+	<section>
+		<article>
 <%@ page import ="com.kabank.jee.domain.LottoBean" %>
 <%@ page import="java.util.*" %>
 <%@ page import="com.kabank.jee.domain.BurgerkingBean" %>
@@ -12,6 +15,9 @@
 
 	public List<LottoBean> createLottos(int count){
 		List<LottoBean> list = new ArrayList<>();
+		for(int i=0; i<count; i++){
+		/* 	list.add(i, createLotto()); */
+		}
 		return list;
 
 	}
@@ -34,8 +40,11 @@
 			}	
 			}
 			return lotto;
-	}
+	}	
+
+	
 %>
+
 	<div>
 <% 		
 		int count = countRow(request.getParameter("money"));
@@ -54,4 +63,9 @@
 		1 2 3 4 5 6 
 		1 2 3 4 5 6 
 	</div>
+			</article>
+		</section>
+			<aside>
+			
+			</aside>
 <%@ include file= "../common/footer.jsp" %>	
