@@ -71,7 +71,8 @@
 		for(BurgerkingBean s: list){
 %>
 			<%=s %> <br/>
-<% 
+<% 			res += Integer.parseInt(s.getCount()) * Integer.parseInt(s.getPrice());
+			total = String.valueOf(res);
 		}
 %>
 	</article>

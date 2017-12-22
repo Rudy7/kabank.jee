@@ -4,55 +4,62 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>index</title>
-		<link rel="shortcut icon" href="../../img/img.jpg" />
+		<link rel="shortcut icon" href="../img/favicon.ico" />
 		<link rel="stylesheet" href="../css/common.css" />
 		<link rel="stylesheet" href="../css/index.css" />
+		<script src="../js/index.js"></script>
 </head>
 <body>
 <div id="wrapper">
-
-		<header id = "index_header">
-			<a href="../index.jsp" style="margin-left: 50px">HOME</a>
+		<header id="index_header">
+			<a href="#">비트 캠프 프로젝트에 오신 걸 환영합니다.</a>
 		</header>
-		<section id="index_section">
+		<section >
 			<article>
-			
-		 <table id= "index_table">
-			<tr style="height:60%">
+		 <table id="index_table" >
+			<tr >
 			<td colspan="5">
-			
-				<form action="burgerking/main.jsp">
-				<aside id="join_aside">
-				<table id="index_login_box">
+				<form id="index_login_box" action="burgerking/main.jsp">
+				<table style=margin-left:270px>
 						<tr>
 	   						<td>
-	   						<input type="text" id="index_input_id" placeholder="ID"> 
+	   						<input id="index_input_id" type="text"  placeholder="ID"> 
 						    </td>
-						    <td colspan="2">
-							<input type="submit" id="index_input_btn" value="로그인"> 
+						    <td rowspan="2">
+						    <button id="index_login_btn">로그인</button>
 							</td>
 						</tr>
 						<tr>
 							<td>
-							<input type="text" id="index_input_pass" placeholder="PASSWORD" />
-							</td>
-							<td>
-							
+							<input id="index_input_pass" type="text"  placeholder="PASSWORD" />
 							</td>
 						</tr>
 						
 				</table>
-				</aside>
 				</form>
-				<tr><td>
-				<a href="member/join.jsp">
+				<table style=margin-left:270px>
+				<tr>
+					<td>
+						<a id="go_admin_link" href="#" >관리자 <br>
+						</a> 
+						<a id="go_join_link" href="#" >회원가입 
+						</a>
+					</td>
+				</tr>
+				</table>	
+				<tr>
+					<td>
+				<!-- <a id="go_join" href="member/join.jsp">
 							<input type="submit" value="회원가입"/>
-							</a>
-				</td></tr>
+							</a> -->
+					</td>
+				</tr>
 			</table> 
 			</article>
 	</section>
-<%@ include file= "common/footer.jsp" %>
 </div>
+<%@ include file= "common/footer.jsp" %>
 </body>
 </html>
+
+

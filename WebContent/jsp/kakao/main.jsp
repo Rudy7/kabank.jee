@@ -21,4 +21,5 @@
 		</aside>
 <%@ include file= "../common/footer.jsp" %>	
 </body>
+	<script src="../../js/kakao.js"></script>
 </html>

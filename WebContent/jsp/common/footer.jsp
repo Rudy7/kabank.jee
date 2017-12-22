@@ -2,6 +2,6 @@
 <footer>
 	<address style="width:200px; margin:0 auto">
 	Copyright &copy;
-		<a href="http://bitcamp.co.kr/index.php?main_page=home">비트캠프</a>
+		<a id="go_bit2" href="#">비트캠프</a>
 	</address>
 </footer>
