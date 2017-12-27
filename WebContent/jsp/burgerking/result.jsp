@@ -27,6 +27,7 @@
 	String saladCount = request.getParameter("salad-count");
 	
 	String place = request.getParameter("place");
+
 	
 	hamburger.setMenu("햄버거");
 	hamburger.setPrice(hamburgerPrice);
@@ -66,7 +67,7 @@
 	String total = "";
 	
 %>
-<%= place %>
+<%= place %> 
 <%
 		for(BurgerkingBean s: list){
 %>
@@ -75,11 +76,10 @@
 			total = String.valueOf(res);
 		}
 %>
+총 합계 : <%=total %> ￦	
 	</article>
 </section>
 <aside>
-
 </aside>
-
 <%@ include file="../common/footer.jsp"%>
 

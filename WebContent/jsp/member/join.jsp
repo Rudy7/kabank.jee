@@ -6,10 +6,10 @@
 <%@ include file= "../common/head.jsp" %>	<!-- 헤드는 바디 밖에 둬야한다.  -->
 <body>
 <%@ include file= "../common/header.jsp" %>
+<%@ include file= "../common/nav.jsp" %>
 
 <div id="wrapper">
 	
-<%@ include file="../common/nav.jsp" %>
 	<section>
 		<article>
 			<header id="join_second_header">
@@ -28,8 +28,6 @@
 					<td>
 						아이디*    <input id="join_id" name="join_id" type="text"  value="" placeholder="id" />
 								   <button id="check_dupl_btn" name="check_cupl_btn">중복확인</button>
-								   <!-- <input  type="submit"  value="중복확인" placeholder="id"/> -->
-								   <!-- <button>확인</button> <button>취소</button> -->
 					</td>
 				</tr>
 				<tr>
@@ -67,15 +65,14 @@
 				<tr>
 					<td>
 						집주소    <input type="text" name="name" value=""  placeholder="addr"/>
-								<!-- <button style="width:160px; height:30px">확인</button>
-								<button style="width:160px; height:30px">취소</button> -->	
+								
 					</td>
 				</tr>	
 				<tr>
 					<td>
 						날짜    <input type="date" name="name" value=""  placeholder="addr"/> 
 								<button id="join_confirm_btn">확인</button>  <button>취소</button>
-								<!-- <input type="submit" name="name" value="회원가입 완료" /> -->
+								
 					</td>
 				</tr>	
 			</table> 	

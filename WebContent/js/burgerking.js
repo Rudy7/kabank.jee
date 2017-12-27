@@ -3,7 +3,7 @@ function init() {
 	for(var i=0; i<arr.length; i++){
 		document. querySelector('#'+arr[i]).addEventListener('click',
 			function(e){
-			location.href = "../jsp/"+this.id+"/main.jsp";
+			location.href = "../"+this.id+"/main.jsp";
 		},false);
 	}
 	document.querySelector('#burgerking_order_btn')
@@ -12,10 +12,5 @@ function init() {
 function order(){
 	document.querySelector('#order_form').submit();
 }
-window.addEventListener("",init,false);
-
-
-
-
-
+window.addEventListener("load",init,false);
 

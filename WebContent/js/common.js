@@ -1,19 +1,16 @@
 window.onload = execute;
 function execute(){
-	document.querySelector('#go_home').onclick=goAdmin;   
-	document.querySelector('#go_join').onclick=gojoin;    
+/*	document.querySelector('#go_home').onclick=goAdmin;   
+	document.querySelector('#go_join').onclick=gojoin;*/
+	
+	document.querySelector('#go_home').onclick=goHome;
+	document.querySelector('#go_out').onclick=goOut;
 }
-function goAdmin(){
-		var admin = prompt('관리자?');
-		if(admin){
-			alert('안녕하세요'+ name);
-			location.href = "../burgerking/main.jsp";
-		}else{
-			alert('관리자만 접근가능 합니다.');
-		}
+function goHome(){
+	location.href = "../burgerking/main.jsp";
 }
-function gojoin(){
-		location.href = "./member/join.jsp"
+function goOut(){
+	location.href = "../index.jsp"
 }
 
 

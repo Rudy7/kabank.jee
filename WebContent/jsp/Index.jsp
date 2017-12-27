@@ -10,9 +10,9 @@
 		<script src="../js/index.js"></script>
 </head>
 <body>
-<div id="wrapper">
+<div id="wrapper3">
 		<header id="index_header">
-			<a href="#">비트 캠프 프로젝트에 오신 걸 환영합니다.</a>
+			<a href="#">비트 캠프 프로젝트</a>
 		</header>
 		<section >
 			<article>
@@ -20,24 +20,23 @@
 			<tr >
 			<td colspan="5">
 				<form id="index_login_box" action="burgerking/main.jsp">
-				<table style=margin-left:270px>
+				<table>
 						<tr>
 	   						<td>
-	   						<input id="index_input_id" type="text"  placeholder="ID"> 
+	   							<input id="index_input_id" type="text"  placeholder="ID"> 
 						    </td>
 						    <td rowspan="2">
-						    <button id="index_login_btn">로그인</button>
+						    	<button id="index_login_btn">로그인</button>
 							</td>
 						</tr>
 						<tr>
 							<td>
-							<input id="index_input_pass" type="text"  placeholder="PASSWORD" />
+								<input id="index_input_pass" type="text"  placeholder="PASSWORD" />
 							</td>
-						</tr>
-						
+						</tr>	
 				</table>
 				</form>
-				<table style=margin-left:270px>
+				<table>
 				<tr>
 					<td>
 						<a id="go_admin_link" href="#" >관리자 <br>
