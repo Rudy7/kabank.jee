@@ -1,18 +1,83 @@
+<%@page import="com.kabank.jee.domain.MemberBean"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!doctype html>
-<html lang="en">
-<%@ include file= "../common/head.jsp" %>	<!-- 헤드는 바디 밖에 둬야한다.  -->
-<body>
-<%@ include file= "../common/header.jsp" %>		
-<%@ include file= "../common/nav.jsp" %>
-	<section>
-		<article>
-		
-		</article>
-	</section>
-		<aside>
-		
-		</aside>
-<%@ include file= "../common/footer.jsp" %>	 <!-- 푸터는 보여지는 곳이라 바디 안에 있어야 한다. -->
-</body>
-</html>
+<%@ page import="java.sql.*" %>
+<%@ page import = "java.util.*" %>
+<%@ page import = "com.kabank.jee.domain.AttendBean" %>>
+
+<%
+System.out.print("================찍고 옴==============");
+Connection conn = null;
+Statement stmt = null;
+String sql = "";
+ResultSet rs = null;
+List<MemberBean> result = new ArrayList<>();
+try{
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","bitcamp","bitcamp");
+	stmt = conn.createStatement();
+	sql = "SELECT * FROM tab";
+	 rs = stmt.executeQuery(sql);
+	List<String> list = new ArrayList<>();
+	while(rs.next()){
+		String temp = rs.getString("TNAME");
+		list.add(temp);
+	}
+	boolean exist = false;
+	for(String s: list){
+		if(s.equalsIgnoreCase("attend")){
+			exist = true;
+			break;
+		}
+	} 
+	if(!exist){
+		stmt.executeUpdate(
+			"CREATE TABLE Attend("
+			+" id VARCHAR2(20) PRIMARY KEY,"
+			+" week VARCHAR2(10),"
+			+" status VARCHAR2(10)"
+				
+		    +")");
+	}
+	/* else{
+		rs = stmt.executeQuery(
+				"SELECT id,week,status " + " FROM Member");
+		while(rs.next()){
+			MemberBean m = new MemberBean();
+			String id = rs.getString("id");
+			String week = rs.getString("week");
+			String status = rs.getString("status");
+	
+			m.setId(id);
+			  m.setWeek(week);
+			m.setStatus(status); 
+			
+			result.add(m);
+		} */
+	/* } */
+}catch(Exception e)
+	{e.printStackTrace();
+}
+
+
+
+System.out.print("=======왔다 감=====");
+
+pageContext.forward("main.jsp");
+%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

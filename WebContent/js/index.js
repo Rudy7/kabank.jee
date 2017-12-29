@@ -28,19 +28,16 @@ function indexLogin(e){
 }
 
 function goAdmin(){
-	var admin = prompt('관리자?');
-	if(admin){
-		alert('안녕하세요'+ name);
-		location.href = "burgerking/main.jsp";
+	if(prompt('관리자?')){
+		location.href = "admin/main.jsp";
 	}else{
 		alert('관리자만 접근가능 합니다.');
 	}
 }
 function goJoin(){
-	location.href = "./member/join.jsp"   
+	location.href = "user/join_form.jsp"   
 }
 window.addEventListener("load",init,false);
-
 
 
 

@@ -1,62 +1,36 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file= "../common/head.jsp" %>
 <!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8" />
-	<title>Index</title>
-	
-#header {
-	position: absolute;
-	height: 200px;
-}	
-#left {
-	width:200px;
-	position: absolute;
-	left:0;
-}	
-#content {
-	position: absolute;
-	left:200px;
-	right:200px;
-}
-</head>
+<%@ include file= "../common/head.jsp" %>
+<link rel="stylesheet" href="../../css/admin.css" />
 <body>	
-  <div id="wrapper">
+  <div id="admin_div">
 	<header>
-	
+		<h1 id="admin_title">관리자 페이지 메인</h1> 
 	</header>
-		<nav>
-			<aside>
-				<table>
-					<tr>
-						<td rowspan="500">
-							회원가입
-						</td>
-					</tr>
-				</table>
-			</aside>
-			<section>
-				<article>
-					<table style=>
+		<aside id="admin_aside" >
+						<button id="member_mgmt_link">회원관리
+						</button>
+		</aside>
+			<section id="admin_section"><table id="admin_table" >
 						<tr>
 							<td>
-							<button id="index_member_btn">회원관리</button>
+							<button id="create_table_btn">테이블생성</button>
 							</td>
-							<td>점검중</td>
-							<td>점검중</td>
+							<td>준비중</td>
+							<td>준비중</td>
 						</tr>
 						<tr>
-							<td>점검중</td>
-							<td>점검중</td>
-							<td>점검중</td>
+							<td>준비중</td>
+							<td>준비중</td>
+							<td>준비중</td>
 						</tr>
 					</table>
-				</article>	
+					
 			</section>
-		</nav>
-	
-		
-
   </div>
+  <script src="../../js/admin/main.js"></script>
 </body>
+<%@ include file= "../common/footer.jsp" %>
 </html>

@@ -11,5 +11,6 @@
 		<link rel="stylesheet" href="../../css/lotto.css" />
 		<link rel="stylesheet" href="../../css/sktelecom.css" /> 
 		<link rel="stylesheet" href="../../css/member.css" />
-		<script src="../../js/common.js"></script>
+		<link rel="stylesheet" href="../../css/admin.css" />
+	<!-- 	<script src="../../js/common.js"></script> -->  <!--실수 잊지말자  -->
 </head>

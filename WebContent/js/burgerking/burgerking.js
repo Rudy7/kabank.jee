@@ -6,9 +6,14 @@ function init() {
 			location.href = "../"+this.id+"/main.jsp";
 		},false);
 	}
+	
+	
+	
+	document.querySelector('#burgerking_order_btn')
+		.addEventListener('click',order,false);
 }
-window.addEventListener("load", init,false);
-
-
-
+function order(){
+	document.querySelector('#order_form').submit();
+}
+window.addEventListener("load",init,false);
 

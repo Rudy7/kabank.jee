@@ -1,0 +1,11 @@
+@charset "UTF-8";
+*{margin: 0px; padding: 0px}
+#admin_title{margin:0 auto; width: 300px;}
+#admin_div {margin:0 auto; width: 1000px; height:600px;}
+#admin_aside {width:150px; height:400px; background:orange; float:left; margin-left:100px; border:2px solid gray;}
+
+#admin_section{width:400px; height:400px; float:left; }
+#admin_table{width:500px; height:400px; margin:0auto; text-align:center; background:orange; border:2px solid gray;}
+table, tr{text-align:center;}
+#admin_table tr td {margin:0auto; text-align:center;}
+#create_table_btn {}

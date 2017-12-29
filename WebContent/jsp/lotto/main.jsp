@@ -22,5 +22,5 @@
 	</aside>
 <%@ include file= "../common/footer.jsp" %>	
 </body>
-	<script src="../../js/lotto.js"></script>
+	<script src="../../js/lotto/lotto.js"></script>
 </html>

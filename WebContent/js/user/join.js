@@ -1,9 +1,9 @@
 function init(){
 	var checkDuplBtn = document.querySelector('#check_dupl_btn');
 	var joinConfirmBtn = document.querySelector('#join_confirm_btn');
-	
 	checkDuplBtn.addEventListener("click",checkDuplclick,false);
 	joinConfirmBtn.addEventListener("click",joinConfirm,false);
+	
 }
 function checkDuplclick(e){
 	alert('중복체크 클릭');
